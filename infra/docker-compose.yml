@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: database_assistant_db
+    environment:
+      POSTGRES_DB: da_db
+      POSTGRES_USER: da_user
+      POSTGRES_PASSWORD: da_pass
+    ports:
+      - "5433:5432"   # <-- change this (host:container)
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:
