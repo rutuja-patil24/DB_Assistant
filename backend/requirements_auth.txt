@@ -1,0 +1,15 @@
+# Install with:
+#   pip install -r requirements_auth.txt
+
+# Auth + JWT
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==42.0.5
+python-multipart==0.0.9
+
+# Already in your requirements.txt (listed for reference):
+# fastapi
+# uvicorn
+# psycopg2-binary
+# pydantic[email]
+# python-dotenv
